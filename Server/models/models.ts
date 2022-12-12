@@ -15,7 +15,7 @@ const Vacancy = Sequel.define("vacancy", {
     price: {type: DataTypes.INTEGER, allowNull: false},
 })
 
-User.HasMany(Vacancy);
+User.hasMany(Vacancy);
 Vacancy.belongsTo(User);
 
 module.exports = {

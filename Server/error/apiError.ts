@@ -1,20 +1,20 @@
 class apiError extends Error {
     status: any;
-    constructor(status, message) {
+    constructor(status: number, message: string) {
         super();
         this.status = status,
         this.message = message
     }
 
-    static badRequest(message) {
-		return new ApiError(404, message);
+    static badRequest(message: string) {
+		return new apiError(404, message);
 	}
-	static internal(message) {
-		return new ApiError(500, message);
+	static internal(message: string) {
+		return new apiError(500, message);
 	}
-	static forbidden(message) {
-		return new ApiError(403, message);
+	static forbidden(message: string) {
+		return new apiError(403, message);
 	}
 }
 
-module.exports = ApiError;
+module.exports = apiError;
