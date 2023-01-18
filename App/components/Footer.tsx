@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className="flex justify-center">
+      <div className="flex justify-center my-10">
         <h2 className="footer__title">
           Made with ❤ by{" "}
           <a
